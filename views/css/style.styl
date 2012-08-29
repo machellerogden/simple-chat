@@ -1,0 +1,84 @@
+@import 'nib'
+
+global-reset()
+
+reset-html5()
+
+html
+    height 100%
+
+body
+    height 100%
+    background linear-gradient(top, #444, 10% #222)
+    padding 10px 20px
+    font-family 'Source Sans Pro'
+
+h1
+    font-size 1.75em
+    color white
+    margin 0.5em 0 1em
+    font-weight normal
+    text-shadow black 0 1px 1px
+
+p
+    margin 0 0 1em 0
+
+#users
+    width 200px
+    margin-right 20px
+    h3
+        color #999
+        font-size 1.25em
+        font-weight normal
+        text-transform uppercase
+        margin 0 0 0.5em
+    ul
+        padding 0
+    li
+        color #bd0
+        list-style-type none
+        padding 8px
+        margin-bottom 8px
+        background #222
+        border-radius 3px
+
+#main
+    width 500px
+
+#users, #main
+    float left
+    border-color black #333 #333 black
+    border-style solid
+    border-width 1px
+    border-radius 5px
+    background linear-gradient(top, black, 10% #191919)
+    color white
+    min-height 300px
+    overflow scroll-y
+    padding 20px
+
+.username
+    color #999
+
+.message
+    font-weight normal
+    
+input#msg, input#input
+    height 30px
+    background #333
+    border #555 1px solid
+    border-color black #555 #555 black
+    border-radius 8px
+
+input#msg
+    width 422px
+    padding 2px
+    margin-right 8px
+
+input#send
+    width 64px
+    padding 8px
+
+.clearfix
+    clearfix()
+

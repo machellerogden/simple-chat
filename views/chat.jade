@@ -1,0 +1,23 @@
+extends layout
+
+block headBlock
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/ender.min.js")
+    script(src="/js/chat.js")
+    link(href='/css/style.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900', rel='stylesheet', type='text/css')
+
+block bodyBlock
+    h1= pageTitle
+    #users
+        h3
+            strong USERS
+        ul#userlist(data-bind="foreach: uids")
+            li(data-bind="text: $data")
+    #main
+        #conversation(data-bind="foreach: conversation")
+            p.message
+                span.username(data-bind="text: username + ': &nbsp;'")
+                span(data-bind="text: message")
+        input#msg
+        input#send(type="button", value="send")
