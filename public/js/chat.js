@@ -38,6 +38,10 @@ $.domReady(function () {
         });
     });
 
+    socket.on('error', function(msg) {
+        alert(msg);
+    });
+
     // ui events
     $('#send').click( function() {
         var msg = $('#msg').val()

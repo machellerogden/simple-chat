@@ -13,22 +13,31 @@ exports.setUsers = function (id) {
 exports.updateChat = function (data) {
     var socket = this;
     // we tell the client to execute 'updatechat' with 2 parameters
-    io.sockets.emit('updatechat', socket.uid, data);
+    if (data) {
+        io.sockets.emit('updatechat', socket.uid, data);
+    } else {
+        socket.emit('error','You must enter a message.');
+    }
 };
 
 // when the client emits 'adduser', this listens and executes
 exports.connect = function (uid) {
     var socket = this;
-    // we store the user id in the socket session for this client
-    socket.uid = uid;
-    // add the client's user id to the global list
-    uids[uid] = uid;
-    // echo to client they've connected
-    socket.emit('updatechat', 'SERVER', 'you have connected');
-    // echo globally (all clients) that a person has connected
-    socket.broadcast.emit('updatechat', 'SERVER', uid + ' has connected');
-    // update the list of uids in chat, client-side
-    io.sockets.emit('updateusers', uids);
+    if (uid) {
+        // we store the user id in the socket session for this client
+        socket.uid = uid;
+        // add the client's user id to the global list
+        uids[uid] = uid;
+        // echo to client they've connected
+        socket.emit('updatechat', 'SERVER', 'you have connected');
+        // echo globally (all clients) that a person has connected
+        socket.broadcast.emit('updatechat', 'SERVER', uid + ' has connected');
+        // update the list of uids in chat, client-side
+        io.sockets.emit('updateusers', uids);
+    } else {
+        socket.emit('error','You must enter a username.');
+        socket.emit('connect');
+    }
 };
 
 // when the user disconnects perform this
