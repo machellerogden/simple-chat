@@ -1,5 +1,5 @@
 // socket connection
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect(':3000');
 
 // define models
 var uids = $.observableArray(),
