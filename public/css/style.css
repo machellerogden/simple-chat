@@ -8,15 +8,15 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]),[hidden]{display:none}
 html{height:100%}
-body{height:100%;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #333), color-stop(0.1, #1c1c1c));background:-webkit-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-moz-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-o-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-ms-linear-gradient(top, #333 0%, #1c1c1c 10%);background:linear-gradient(top, #333 0%, #1c1c1c 10%);padding:10px 20px;font-family:'Source Sans Pro';text-align:center}
-.wrapper{width:960px;margin:0 auto}
-h1{font-size:1.75em;color:#fff;margin:.5em 0 1em;padding-top:15px;font-weight:normal;text-align:left;text-shadow:#000 0 1px 1px}
+body{min-height:100%;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #333), color-stop(0.1, #1c1c1c));background:-webkit-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-moz-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-o-linear-gradient(top, #333 0%, #1c1c1c 10%);background:-ms-linear-gradient(top, #333 0%, #1c1c1c 10%);background:linear-gradient(top, #333 0%, #1c1c1c 10%);background-attachment:fixed;padding:10px 20px;font-family:'Source Sans Pro';text-align:center}
+.wrapper{min-height:100%;width:805px;margin:0 auto;padding-bottom:20px}
+h1{font-size:1.75em;color:#fff;margin:.75em 0 1em;padding-top:15px;font-weight:normal;text-align:left;text-shadow:#000 0 1px 1px}
 p{margin:0 0 1em 0}
 #users{width:200px;margin-right:20px;border-color:#000 #222 #222 #000;border-style:solid;border-width:1px;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #000), color-stop(0.1, #161616));background:-webkit-linear-gradient(top, #000 0%, #161616 10%);background:-moz-linear-gradient(top, #000 0%, #161616 10%);background:-o-linear-gradient(top, #000 0%, #161616 10%);background:-ms-linear-gradient(top, #000 0%, #161616 10%);background:linear-gradient(top, #000 0%, #161616 10%);}
 #users h3{color:#999;font-size:1.25em;font-weight:normal;text-transform:uppercase;margin:0 0 .5em}
 #users ul{padding:0}
 #users li{color:#bd0;list-style-type:none;padding:8px;margin-bottom:8px;background:#222;-webkit-border-radius:3px;border-radius:3px}
-#main{width:500px;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.2, #2c2c2c));background:-webkit-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-moz-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-o-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-ms-linear-gradient(top, #444 0%, #2c2c2c 20%);background:linear-gradient(top, #444 0%, #2c2c2c 20%)}
+#main{width:500px;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.2, #2c2c2c));background:-webkit-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-moz-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-o-linear-gradient(top, #444 0%, #2c2c2c 20%);background:-ms-linear-gradient(top, #444 0%, #2c2c2c 20%);background:linear-gradient(top, #444 0%, #2c2c2c 20%);padding-bottom:20px}
 #users,#main{float:left;color:#fff;min-height:300px;overflow:scroll-y;padding:20px;-webkit-border-radius:5px;border-radius:5px;text-align:left}
 .username{color:#aaa}
 .message{font-weight:normal;text-shadow:#000 1px 1px 1px}

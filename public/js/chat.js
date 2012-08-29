@@ -13,7 +13,7 @@ $.domReady(function () {
 
     // socket events
     socket.on('connect', function(){
-        socket.emit('connect', prompt("What's your name?"));
+        socket.emit('connect', prompt('Please enter your name:'));
     });
 
     socket.on('updatechat', function (uid, data) {
@@ -24,8 +24,11 @@ $.domReady(function () {
         };
         // add message to conversation model
         conversation.push(msg);
-        // return focus to send button
-        $('#send').focus();
+        // scroll to bottom
+        var scrollTo = $.doc().height;
+        $(window).scrollTop(scrollTo);
+        // focus on message input
+        $('#msg').focus();
     });
 
     socket.on('updateusers', function(data) {
