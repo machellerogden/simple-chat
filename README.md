@@ -11,7 +11,11 @@ You must have node.js v0.8.7 installed in order to use this example as is (check
 ## Usage
 	cd simple-chat/
 	npm start
-_...then in your browser..._
+
+_...then in your browser, go to..._
+
 	http://localhost:3000/chat
+	
 _...or..._
+
 	http://your-web-server.com:3000/chat
