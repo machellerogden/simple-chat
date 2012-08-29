@@ -9,15 +9,22 @@ html
 
 body
     height 100%
-    background linear-gradient(top, #444, 10% #222)
+    background linear-gradient(top, #333, 10% #1c1c1c)
     padding 10px 20px
     font-family 'Source Sans Pro'
+    text-align center
+
+.wrapper
+    width 960px
+    margin 0 auto
 
 h1
     font-size 1.75em
     color white
     margin 0.5em 0 1em
+    padding-top 15px
     font-weight normal
+    text-align left
     text-shadow black 0 1px 1px
 
 p
@@ -26,6 +33,10 @@ p
 #users
     width 200px
     margin-right 20px
+    border-color black #222 #222 black
+    border-style solid
+    border-width 1px
+    background linear-gradient(top, black, 10% #161616)
     h3
         color #999
         font-size 1.25em
@@ -44,41 +55,46 @@ p
 
 #main
     width 500px
+    background linear-gradient(top, #444, 20% #2c2c2c)
 
 #users, #main
     float left
-    border-color black #333 #333 black
-    border-style solid
-    border-width 1px
-    border-radius 5px
-    background linear-gradient(top, black, 10% #191919)
     color white
     min-height 300px
     overflow scroll-y
     padding 20px
+    border-radius 5px
+    text-align left
 
 .username
-    color #999
+    color #aaa
 
 .message
     font-weight normal
+    text-shadow #000 1px 1px 1px
     
-input#msg, input#input
-    height 30px
-    background #333
-    border #555 1px solid
-    border-color black #555 #555 black
-    border-radius 8px
-
 input#msg
-    width 422px
-    padding 2px
+    width 410px
+    height 28px
+    padding 4px 8px
     margin-right 8px
+    background linear-gradient(top, #333, 10% #4c4c4c)
+    color #eee
+    border #555 1px solid
+    border-color #262626 #595959 #595959 #262626
+    border-radius 8px
+    outline 0 none
 
 input#send
+    font-size 0.825em
+    text-align center
     width 64px
+    height 38px
     padding 8px
-
-.clearfix
-    clearfix()
+    background linear-gradient(top, #aaa, 20% #999, #888)
+    color #111
+    border black 1px solid
+    border-color  #ccc #222 #222 #ccc
+    border-radius 8px
+    text-shadow #ddd 1px 1px 1px
 
