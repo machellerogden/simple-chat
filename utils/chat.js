@@ -15,8 +15,6 @@ exports.updateChat = function (data) {
     // we tell the client to execute 'updatechat' with 2 parameters
     if (data) {
         io.sockets.emit('updatechat', socket.uid, data);
-    } else {
-        socket.emit('error','You must enter a message.');
     }
 };
 
